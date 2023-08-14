@@ -1,0 +1,4 @@
+Terraform Block: 
+    • The terraform {} block contains Terraform settings
+    • For each provider, the source attribute defines an optional hostname, a namespace, and the provider type
+    • 

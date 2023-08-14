@@ -1,0 +1,30 @@
+Alibaba Cloud Provider
+    The Alibaba Cloud provider is used to interact with the many resources supported by Alibaba Cloud. The provider needs to be configured with the proper credentials before it can be used.
+
+    Use the navigation on the left to read about the available resources.
+
+Authentication [https://registry.terraform.io/providers/aliyun/alicloud/latest/docs#authentication]
+
+    The Alicloud provider accepts several ways to enter credentials for authentication. The following methods are supported, in this order, and explained below:
+        • Static credentials
+            Static credentials can be provided by adding access_key, secret_key and region in-line in the alicloud provider block:
+                provider "alicloud" {
+                    access_key = "${var.access_key}"
+                    secret_key = "${var.secret_key}"
+                    region     = "${var.region}"
+                }    
+        
+        • Environment variables
+            You can provide your credentials via ALICLOUD_ACCESS_KEY and ALICLOUD_SECRET_KEY environment variables, representing your Alicloud access key and secret key respectively. ALICLOUD_REGION is also used, if applicable:
+                Block:
+                    provider "alicloud" {}
+                CLI:
+                    $ export ALICLOUD_ACCESS_KEY="access-key"
+                    $ export ALICLOUD_SECRET_KEY="secret-key"
+                    $ export ALICLOUD_REGION="sea-jakarta"
+                    $ terraform plan
+
+        • Shared credentials/configuration file
+        • ECS Role
+        • Assume role
+        • Sidecar Credentials
