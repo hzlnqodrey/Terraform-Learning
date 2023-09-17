@@ -13,6 +13,11 @@ resource "google_compute_subnetwork" "dev-subnet-01" {
     ip_cidr_range = "10.100.0.0/16"
     network = google_compute_network.development_network.id
     region = "asia-southeast2"
+    secondary_ip_range {
+        range_name = "secondary-range-01"
+        ip_cidr_range = "192.168.10.0/24"
+        
+    }
 }
 
 data "google_compute_network" "existing_network" {
