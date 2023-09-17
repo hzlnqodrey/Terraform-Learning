@@ -16,17 +16,16 @@ resource "google_compute_subnetwork" "dev-subnet-01" {
     secondary_ip_range {
         range_name = "secondary-range-01"
         ip_cidr_range = "192.168.10.0/24"
-        
     }
 }
 
-data "google_compute_network" "existing_network" {
-    name = "default"
-}
+# data "google_compute_network" "existing_network" {
+#     name = "default"
+# }
 
-resource "google_compute_subnetwork" "dev-subnet-02" {
-    name = "dev-subnet-02"
-    ip_cidr_range = "10.110.0.0/16"
-    network = data.google_compute_network.existing_network.id
-    region = "asia-southeast2"
-}
+# resource "google_compute_subnetwork" "dev-subnet-02" {
+#     name = "dev-subnet-02"
+#     ip_cidr_range = "10.110.0.0/16"
+#     network = data.google_compute_network.existing_network.id
+#     region = "asia-southeast2"
+# }
