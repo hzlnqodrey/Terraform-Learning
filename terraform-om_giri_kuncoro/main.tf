@@ -4,9 +4,8 @@ provider "google" {
 }
 
 variable "subnet_ip_cidr_range" {
-    description = "subnet untuk dev environment"
-    default     = "10.150.0.0/16"
-    type = string
+    description = "ip range untuk semua subnet"
+    type = list(string)
 }
 
 variable "subnet_secondary_ip_cidr_range" {
@@ -28,13 +27,20 @@ resource "google_compute_network" "development_network" {
 
 resource "google_compute_subnetwork" "dev-subnet-01" {
     name = var.subnet_01_name
-    ip_cidr_range = var.subnet_ip_cidr_range
+    ip_cidr_range = var.subnet_ip_cidr_range[0]
     network = google_compute_network.development_network.id
     region = "asia-southeast2"
     # secondary_ip_range {
     #     range_name = "secondary-range-01"
     #     ip_cidr_range = var.subnet_secondary_ip_cidr_range
     # }
+}
+
+resource "google_compute_subnetwork" "dev-subnet-02" {
+    name = var.subnet_02_name
+    ip_cidr_range = var.subnet_ip_cidr_range[1]
+    network = google_compute_network.development_network.id
+    region = "asia-southeast2"
 }
 
 # data "google_compute_network" "existing_network" {
