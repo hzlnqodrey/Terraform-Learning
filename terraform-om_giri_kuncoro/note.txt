@@ -1,0 +1,28 @@
+Chapter 1-5
+- Terraform Init
+- Terraform Apply
+
+Chapter 6
+- Terraform Destroy
+- Terraform Destroy -target google_compute_subnetwork dev-subnet-01
+
+Chapter 7
+- Terraform Plan
+- Terraform apply -auto-approve
+
+CI/CD Konsep
+- Stage 1: Terraform plan
+- Stage 2: Terraform apply -auto-approve
+
+
+Chapter 8 - Terraform STATE
+- terraform state list
+- terraform state show
+- terraform state 
+P.S.: jangan ngutak ngatik manual terraform.tfstate, fatal akibatnya
+
+Chapter 9 - Output Values
+-
+
+Chapter 10
+-

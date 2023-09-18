@@ -29,3 +29,7 @@ resource "google_compute_subnetwork" "dev-subnet-01" {
 #     network = data.google_compute_network.existing_network.id
 #     region = "asia-southeast2"
 # }
+
+output "development_network_id" {
+    value = google_compute_network.development_network.id
+}
