@@ -7,6 +7,10 @@ variable "subnet_ip_cidr_range" {
     description = "subnet untuk dev environment"
 }
 
+variable "subnet_secondary_ip_cidr_range" {
+    description = "secondary ip range subnet untuk dev environment"
+}
+
 resource "google_compute_network" "development_network" {
     name = "development-network"
     auto_create_subnetworks = false
@@ -19,7 +23,7 @@ resource "google_compute_subnetwork" "dev-subnet-01" {
     region = "asia-southeast2"
     secondary_ip_range {
         range_name = "secondary-range-01"
-        ip_cidr_range = "192.168.10.0/24"
+        ip_cidr_range = var.subnet_secondary_ip_cidr_range
     }
 }
 
