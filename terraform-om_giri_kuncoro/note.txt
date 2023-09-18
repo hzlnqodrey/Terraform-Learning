@@ -34,9 +34,14 @@ Chapter 10 - Variabel Input
     - buat file baru khusus untuk membuat Variabel
     - lebih mudah untuk dibaca dan di-manage
 
-Chapter 11 - Variable Environment (PROD/DEV/STG) | Kapan Pakai Terraform Variabel?
+Chapter 11 - Variable TYPE (string, list, object map) | Kapan Pakai Terraform Variabel?
     - buat nama variable itu GENERIK kayak my_network, my_subnetwork
     - cara kasih tau variable file yg dituju
         - terraform apply -var-file terraform-dev.tfvars
     - default values
         - di variable function, kasih param default
+
+Chapter 12 - Variabel ENV (PROD, DEV, STG)
+    - Cara Konfigurasi Credentials untuk Google Cloud Provider
+    - SERVICE ACCOUNT
+    - logout akun gcp dari terminal: gcloud auth application-default revoke

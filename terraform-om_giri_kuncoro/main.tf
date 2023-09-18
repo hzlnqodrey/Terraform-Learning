@@ -1,8 +1,13 @@
 provider "google" {
     project = "belajar-terraform-398813"
     region = "asia-southeast2"
+    credentials = var.google_credentials
 }
 
+variable "google_credentials" {
+    description = "service account credentials gcp saya"
+    type = string
+}
 variable "subnet_ip_cidr_range" {
     description = "ip range untuk semua subnet"
     type = list(object({
