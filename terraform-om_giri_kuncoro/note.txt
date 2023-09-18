@@ -22,7 +22,8 @@ Chapter 8 - Terraform STATE
 P.S.: jangan ngutak ngatik manual terraform.tfstate, fatal akibatnya
 
 Chapter 9 - Output Values
--
+- 1 output 1 value
+- memudahkan melihat output tanpa melakukan command "terraform state show _._"
 
-Chapter 10
--
+Chapter 10 - Variabel Input
+- 
