@@ -33,3 +33,7 @@ resource "google_compute_subnetwork" "dev-subnet-01" {
 output "development_network_id" {
     value = google_compute_network.development_network.id
 }
+
+output "dev_subnet_01_gateway" {
+    value = google_compute_subnetwork.dev-subnet-01.gateway_address
+}
