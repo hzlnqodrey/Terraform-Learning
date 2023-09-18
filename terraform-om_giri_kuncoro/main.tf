@@ -5,7 +5,8 @@ provider "google" {
 
 variable "subnet_ip_cidr_range" {
     description = "subnet untuk dev environment"
-    default     = "10.150.0.0/16" 
+    default     = "10.150.0.0/16"
+    type = string
 }
 
 variable "subnet_secondary_ip_cidr_range" {
