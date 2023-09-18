@@ -33,3 +33,10 @@ Chapter 10 - Variabel Input
 - Best Practices:
     - buat file baru khusus untuk membuat Variabel
     - lebih mudah untuk dibaca dan di-manage
+
+Chapter 11 - Variable Environment (PROD/DEV/STG) | Kapan Pakai Terraform Variabel?
+    - buat nama variable itu GENERIK kayak my_network, my_subnetwork
+    - cara kasih tau variable file yg dituju
+        - terraform apply -var-file terraform-dev.tfvars
+    - default values
+        - di variable function, kasih param default
