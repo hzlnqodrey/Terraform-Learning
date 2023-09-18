@@ -26,4 +26,10 @@ Chapter 9 - Output Values
 - memudahkan melihat output tanpa melakukan command "terraform state show _._"
 
 Chapter 10 - Variabel Input
-- 
+- input var in CLI
+- terraform argument (args): flag -var
+    terraform apply -var subnet_ip_cidr_range=10.120.0.0/16
+
+- Best Practices:
+    - buat file baru khusus untuk membuat Variabel
+    - lebih mudah untuk dibaca dan di-manage
